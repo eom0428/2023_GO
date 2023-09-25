@@ -17,21 +17,24 @@ func main() {
 	fmt.Println("Guss Number Game")
 	fmt.Println((answer))
 
-	reader := bufio.NewReader(rd)(os.Stdin)
+	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Print("input guess number : ")
-	inputNumber, err := reader.ReadString('\n')
-	if err != nil {
-		log.Fatal(err)
-	}
-	inputNumberString = strings.TrimSpace(inputNumberString)
-	inputNumber, err := strconv.Atoi(inputNumberString)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if inputNumber < answer {
-		fmt.Println("Guess number is lower then answer") //Answe is higher
-	} else if inputNumber > answer {
-		fmt.Println("Guess number is higher then answer") //Answe is lower
+	for i := 0; i < 10; i++ {
+		fmt.Println("you have", 10-i, "chances")
+		fmt.Print("input guess number : ")
+		inputNumberString, err := reader.ReadString('\n')
+		if err != nil {
+			log.Fatal(err)
+		}
+		inputNumberString = strings.TrimSpace(inputNumberString)
+		inputNumber, err := strconv.Atoi(inputNumberString)
+		if err != nil {
+			log.Fatal(err)
+		}
+		if inputNumber < answer {
+			fmt.Println("Guess number is lower then answer") //Answe is higher
+		} else if inputNumber > answer {
+			fmt.Println("Guess number is higher then answer") //Answe is lower
+		}
 	}
 }
