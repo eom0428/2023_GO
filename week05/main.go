@@ -16,18 +16,18 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
+	input = string.TrimSpace(input)
 	inputNumberString = strings.TrimSpace(inputNumberString)
 	inputNumber, err := strconv.ParseFloat(s, bitSize)(inputNumberString, 32)
 
 	if err != nil {
 		log.Fatal(err)
 	}
-
+	var grade string
 	if inputNumber >= 90 {
-		grade := "A grade!"
+		grade = "A grade!"
 	} else {
-		grade := "BCDE grade~"
+		grade = "BCDE grade~"
 	}
 	fmt.Println(" you got" + grade)
 }
