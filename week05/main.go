@@ -9,6 +9,6 @@ import (
 func main() {
 	fmt.Print("input Score : ")
 	reader := bufio.NewReader(os.Stdin)
-	inputNumber, err := reader.ReadString('\n') //1 variable but reader.ReadString returns 2 values,  err declared and not used
+	inputNumber, _ := reader.ReadString('\n') //1 variable but reader.ReadString returns 2 values,  err declared and not used, option 1
 	fmt.Println(inputNumber)
 }
