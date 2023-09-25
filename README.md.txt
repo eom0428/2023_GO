@@ -1,0 +1,1 @@
+This repository manages codes and assignments used in the 2023 go programming class.
