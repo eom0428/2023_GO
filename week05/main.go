@@ -16,9 +16,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	input = string.TrimSpace(input)
-	inputNumberString = strings.TrimSpace(inputNumberString)
-	inputNumber, err := strconv.ParseFloat(s, bitSize)(inputNumberString, 32)
+	inputNumberString = strings.TrimSpace(inputNumberString) // remove space bar
+	inputNumber, err := strconv.ParseFloat(inputNumberString, 32)
 
 	if err != nil {
 		log.Fatal(err)
