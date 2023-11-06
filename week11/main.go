@@ -29,7 +29,7 @@ func main() {
 		fmt.Println(primes[j])
 	}
 
-	for idx, prime := range primes {
-		fmt.Println(idx, prime)
+	for _, prime := range primes {
+		fmt.Println(prime)
 	}
 }
