@@ -19,8 +19,17 @@ func main() {
 	fmt.Println(test[3]) //boolean 타입의 제로값 출력
 
 	i := 0
-	for i < 4 {
+	//for i < 4
+	for i < len(primes) {
 		fmt.Println(primes[i])
 		i++
+	}
+
+	for j := 0; j < len(primes); j++ {
+		fmt.Println(primes[j])
+	}
+
+	for idx, prime := range primes {
+		fmt.Println(idx, prime)
 	}
 }
