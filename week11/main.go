@@ -25,11 +25,16 @@ func main() {
 		i++
 	}
 
-	for j := 0; j < len(primes); j++ {
-		fmt.Println(primes[j])
-	}
+	//for j := 0; j < len(primes); j++ {
+	//	fmt.Println(primes[j])
+	//}
 
 	for _, prime := range primes {
 		fmt.Println(prime)
 	}
+
+	fmt.Printf("%#v\n", test)
+	fmt.Println(test)
+	fmt.Printf("%#v\n", primes)
+	fmt.Println(primes)
 }
