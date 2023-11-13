@@ -3,13 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	a := []string{"a", "b", "c", "d"}
+	a := make([]string, 4, 5) // 타입, 개수, 수용량
+	a[0] = "a"
+	a[2] = "c"
+	a[3] = "d"
 	as := a[0:2]
 	as[1] = "z"
-	fmt.Println(a)
-	fmt.Println(as)
+	c := append(a, "y")
 
-	b := [4]int{4, 3, 2, 1}
-	bs := b[1:3]
-	fmt.Println(bs)
+	fmt.Println(a, len(a), cap(a))
+	fmt.Println(c, len(c), cap(c))
 }
