@@ -3,12 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	//var s []int
-	//s = make([]int, 5)
 
-	//s := make([]int, 5) 단축 연산자 make 함수 이용
-
-	s := []int{0, 0, 0, 0, 0} //슬라이스 리터럴을 이용
+	s := []int{0, 0, 0, 0, 0}
 
 	s[4] = 99
 	s[2] = 91
@@ -16,4 +12,13 @@ func main() {
 	for _, value := range s {
 		fmt.Println(value)
 	}
+
+	copyS := s[1:4]
+	for _, value := range copyS {
+		fmt.Println(value)
+	}
+
+	test := [3]string{"hamin", "bambi", "noha"} //배욜 리터럴을 이용해서 test 배열 생성
+	testS := test[0:2]
+	fmt.Println(testS, len(testS))
 }
